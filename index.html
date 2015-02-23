@@ -21,12 +21,14 @@
       #images {
         width:100%;
         position:relative;
+        text-align:center;
       }
       #images img {
         display:none;
         position:absolute;
         top:0;
         left:0;
+        width:100%;
       }
       #images img.display {
         display:block;
@@ -34,6 +36,7 @@
       #images-controller {
         .clearfix;
         margin-top:24px;
+        text-align:center;
       }
       #images-controller a {
 
@@ -41,8 +44,7 @@
         height:24px;
         border-radius: 100%;
         display:inline-block;
-        float:left;
-        margin-right:12px;
+        margin:0 6px;
       }
       .button-1 {
 
@@ -72,21 +74,21 @@
 
       <div class="row">
         <div id="images" class="col-md-12">
-          <img src="http://lorempixel.com/output/nature-q-c-640-480-9.jpg" alt="Image" class="img-responsive display">
-          <img src="http://lorempixel.com/output/nature-q-c-640-480-8.jpg" alt="Image" class="img-responsive">
-          <img src="http://lorempixel.com/output/nature-q-c-640-480-7.jpg" alt="Image" class="img-responsive">
-          <img src="http://lorempixel.com/output/nature-q-c-640-480-6.jpg" alt="Image" class="img-responsive">
-          <img src="http://lorempixel.com/output/nature-q-c-640-480-5.jpg" alt="Image" class="img-responsive">
+          <img src="http://lorempixel.com/output/nature-q-c-640-480-9.jpg" alt="Image" class="display">
+          <img src="http://lorempixel.com/output/nature-q-c-640-480-8.jpg" alt="Image">
+          <img src="http://lorempixel.com/output/nature-q-c-640-480-7.jpg" alt="Image">
+          <img src="http://lorempixel.com/output/nature-q-c-640-480-6.jpg" alt="Image">
+          <img src="http://lorempixel.com/output/nature-q-c-640-480-5.jpg" alt="Image">
         </div>
       </div>
 
-      <div id="images-controller">
+      <p id="images-controller" class="clearfix">
         <a href="" class="button-1"></a>
         <a href="" class="button-2"></a>
         <a href="" class="button-3"></a>
         <a href="" class="button-4"></a>
         <a href="" class="button-5"></a>
-      </div>
+      </p>
 
     </div><!-- /.container -->
 
@@ -104,6 +106,7 @@
         $('#images').children(':first').load(function() {
           var imageHeight = $(this).height();
           $('#images').height(imageHeight);
+          
         });
 
         // When the window resizes, change the height of the parent div so that it scales to the viewport
